@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     </head>
     <body>
+        <div class="block-connexion">
         <div id="container">
             <!-- zone de connexion -->
             
@@ -22,7 +23,7 @@
                 // Code de vérification 
                 ?>
             </form>
-            <p><a href="inscription.php">Inscrivez-vous</p>
-        </div>
+            <p><a href="/inscription">Inscrivez-vous</p>
+        </div></div>
     </body>
 </html>

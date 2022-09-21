@@ -14,13 +14,13 @@ class Web
     {
         $main = new SampleWeb();
 
-        Route::Add('/', [$main, 'home']);
+        Route::Add('/', [$main, 'connexion']);
 
         //        Exemple de limitation d'accès à une page en fonction de la SESSION.
         //        if (SessionHelpers::isLogin()) {
         //            Route::Add('/logout', [$main, 'home']);
         //        }
-        Route::Add('/about', [$main, 'about']);
+        Route::Add('/inscription', [$main, 'inscription']);
     }
 }
 
