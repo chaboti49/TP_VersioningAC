@@ -16,4 +16,6 @@ class SampleWeb extends Web
     {
         Template::render("views/inscription.php");
     }
+
+    
 }
