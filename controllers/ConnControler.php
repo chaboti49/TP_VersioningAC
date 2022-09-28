@@ -24,6 +24,7 @@ class ConnControler extends Web
             else{
                 SessionHelpers::logout();
                 $erreur = "Le login n'existe pas ou le mdp n'est pas le bon";
+                $this->redirect('/inscription');
             }
         }
         return Template::render("views/connexion.php", array("erreur" => $erreur));
