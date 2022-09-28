@@ -7,13 +7,17 @@ use utils\Template;
 
 class SampleWeb extends Web
 {
-    function home()
+    function connexion()
     {
         Template::render("views/connexion.php");
     }
     
-    function about()
+    function inscription()
     {
         Template::render("views/inscription.php");
+    }
+
+    function profile(){
+        Template::render("views/profile.php");
     }
 }

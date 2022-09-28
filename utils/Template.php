@@ -19,11 +19,11 @@ class Template
 
     static private function header(): void
     {
-        include_once("./views/common/header.php");
+        include_once("./views/global/header.php");
     }
 
     static private function footer(): void
     {
-        include_once("./views/common/footer.php");
+        include_once("./views/global/footer.php");
     }
 }
