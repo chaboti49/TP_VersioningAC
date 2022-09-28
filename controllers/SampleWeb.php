@@ -17,5 +17,7 @@ class SampleWeb extends Web
         Template::render("views/inscription.php");
     }
 
-    
+    function profile(){
+        Template::render("views/profile.php");
+    }
 }

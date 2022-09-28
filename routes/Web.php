@@ -22,8 +22,10 @@ class Web
         //            Route::Add('/logout', [$main, 'home']);
         //        }
         Route::Add('/inscription', [$main, 'inscription']);
+        Route::Add('/profile', [$main, 'profile']);
         $conn = new ConnControler();
         Route::Add('/verif', [$conn, 'AuthConn']);
+        Route::Add('/deco', [$conn, 'deco']);
     }
 }
 

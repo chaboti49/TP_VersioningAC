@@ -11,7 +11,9 @@
             
             <form action="/verif" method="POST">
                 <h1>Connexion</h1>
-                
+                <?php if(!empty($erreur)){ ?>
+                    <div class="alert alert-danger"><?= $erreur ?></div>
+                <?php } ?>
                 <label><b>Nom d'utilisateur</b></label>
                 <input type="text" placeholder="Entrer le nom d'utilisateur" name="login" required>
 

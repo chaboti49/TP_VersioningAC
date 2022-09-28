@@ -7,10 +7,10 @@ use utils\SessionHelpers;
 
 class ConnControler extends Web
 {
-    public function AuthConn($login = "", $mdp = ""){
+    function AuthConn($login = "", $mdp = ""){
         if(SessionHelpers::IsLogin())
         {
-            $this->redirect("/home");
+            $this->redirect("/profile");
         }
         $erreur = "";
         if(!empty($login) && !empty($mdp))
@@ -18,8 +18,8 @@ class ConnControler extends Web
             $auth = new \models\ConnModel;
             $Lauth = $auth->VerifConn($login, $mdp);
             if($Lauth != null){
-                SessionHelpers::login($Lauth);
-                $this->redirect("/todo/liste");
+                SessionHelpers::login($Lauth['loginUtil']);
+                $this->redirect("/profile");
             }
             else{
                 SessionHelpers::logout();
@@ -27,5 +27,10 @@ class ConnControler extends Web
             }
         }
         return Template::render("views/connexion.php", array("erreur" => $erreur));
+    }
+
+    function deco(){
+        SessionHelpers::logout();
+        $this->redirect("/");
     }
 }
