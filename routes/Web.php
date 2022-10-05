@@ -22,10 +22,13 @@ class Web
         //            Route::Add('/logout', [$main, 'home']);
         //        }
         Route::Add('/inscription', [$main, 'inscription']);
-        Route::Add('/profile', [$main, 'profile']);
+        if(SessionHelpers::isLogin()){
+            Route::Add('/profile', [$main, 'profile']);
+        }
         $conn = new ConnControler();
         Route::Add('/verif', [$conn, 'AuthConn']);
         Route::Add('/deco', [$conn, 'deco']);
+        Route::Add('/inscr', [$conn, 'inscription']);
     }
 }
 

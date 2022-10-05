@@ -17,7 +17,9 @@
             if (\utils\SessionHelpers::isLogin()) {
                 echo '<li class="nav-item"><a href="./me" class="nav-link">Mon compte</a></li>';
                 echo '<li class="nav-item"><a href="/deco" class="nav-link">Deconnexion</a></li>';
-
+            }
+            else{
+                echo '<li class="nav-item"><a href="/" class="nav-link">Connexion</a></li>';
             }
             ?>
             <li class="nav-item"><a href="/about" class="nav-link">À propos</a></li>

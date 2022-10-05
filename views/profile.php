@@ -10,7 +10,7 @@ use utils\SessionHelpers;
     </head>
     <body>
         <div class="block-connexion">
-            <p>hello, <?= SessionHelpers::getConnected(); 
+            <p>hello, <?= SessionHelpers::getConnected()["loginUtil"]; 
             ?></p>
         </div>
     </body>
